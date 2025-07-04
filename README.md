@@ -2,7 +2,8 @@
 
 ## Overview
 
-This Java-based solution implements a minimal, object-oriented e-commerce system for the Fawry Rise Full Stack Development Internship Challenge. Key features include:
+This Java-based solution for the Fawry Rise Full Stack Development Internship Challenge. 
+Key features include:
 
 * **Product Definition**: Base `Product` interface with implementations for expirable and/or shippable items.
 * **Cart Management**: A `ShoppingCart` class enforces stock, expiration, and quantity constraints.
@@ -14,7 +15,8 @@ This Java-based solution implements a minimal, object-oriented e-commerce system
 
 ```
 src/
-└── com/fawryrise/
+└── com/fawry-ecom-task/
+    ├── TestCornerCases.java     # Cover corner cases
     ├── Main.java                # Demo entry point
     ├── model/                   # Domain objects
     │   ├── Product.java         # Core interface
@@ -83,24 +85,14 @@ src/
 ## Assumptions
 
 * All dates use `LocalDate.now()` as a reference.
-* Shipping rate is a constant (20 per kg), but could be externalized.
+* Shipping rate is a constant (20).
 * No persistent storage: stock and balances reset on each run.
 
-## Running the Demo
 
-```bash
-# Compile
-javac -d out src/com/fawryrise/**/*.java
-# Run
-java -cp out com.fawryrise.Main
-```
-
-## Tests (JUnit 5)
-
-* Located under `src/test/java/com/fawryrise/...`
+## Tests 
+* TestCornerCases.java
 * Cover: empty cart, invalid quantities, expiration, stock depletion, insufficient balance, and successful checkout.
 
 ---
 
-*End of README*
 
